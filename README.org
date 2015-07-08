@@ -1,0 +1,88 @@
+
+
+
+* about
+  LED Circle encoder using the [[http://www.ti.com/lit/ds/symlink/tlc5940.pdf][TLC5940]]
+  Idea is to have an encoder that will light up leds as it turns.
+
+* make_placement.py
+  Code to place the LEDs in a nice circle.
+  Use caution when running this *WILL* overwrite the PCB.
+
+* notes
+
+  - kicad libraries are the super awesome http://smisioto.no-ip.org/elettronica/kicad/kicad-en.htm
+
+** setup
+   - You will need to put all the 3d libraries in the same place and set the $KISYS3DMOD variable.
+
+    #+BEGIN_SRC sh
+    cd ~/CODE/kicad/MyLib/smisioto/kicad_libs/modules/packages3d
+    ln -s /usr/share/kicad/modules/packages3d/* .
+    #+END_SRC
+
+   - Keep in mind also that one will need to edit the led_circle.pro and fix the libraries.
+
+
+
+* schematic
+  - reference: https://www.pjrc.com/teensy/td_libs_Tlc5940.html
+
+  #+CAPTION: schematic
+  #+NAME:   fig:1
+  #+attr_html: :width 800px
+  [[./images/schematic/led_circle.sch.png]]
+
+
+* PCB renders
+** bare
+  #+CAPTION: Bottom cu
+  #+NAME:   fig:1
+  #+attr_html: :width 800px
+  [[./images/pcb/led_circle-B_Cu.png]]
+
+  #+CAPTION: Front Coper
+  #+NAME:   fig:2
+  #+attr_html: :width 800px
+  [[./images/pcb/led_circle-F_Cu.png]]
+
+  #+CAPTION: Bottom Silk
+  #+NAME:   fig:3
+  #+attr_html: :width 800px
+  [[./images/pcb/led_circle-B_SilkS.png]]
+
+  #+CAPTION: Front Silk
+  #+NAME:   fig:4
+  #+attr_html: :width 800px
+  [[./images/pcb/led_circle-F_SilkS.png]]
+
+  #+CAPTION: board
+  #+NAME:   fig:5
+  #+attr_html: :width 800px
+  [[./images/pcb/led_circle-brd.png]]
+
+** 3D
+  #+CAPTION: Top angled
+  #+NAME:   fig:1
+  #+attr_html: :width 800px
+  [[./images/3d/led_circle_3d_1.png]]
+
+  #+CAPTION: Bottom angled
+  #+NAME:   fig:2
+  #+attr_html: :width 800px
+  [[./images/3d/led_circle_3d_2.png]]
+
+  #+CAPTION: Top
+  #+NAME:   fig:3
+  #+attr_html: :width 800px
+  [[./images/3d/led_circle_3d_top.png]]
+
+  #+CAPTION: Bottom
+  #+NAME:   fig:4
+  #+attr_html: :width 800px
+  [[./images/3d/led_circle_3d_bottom.png]]
+
+  #+CAPTION: left
+  #+NAME:   fig:5
+  #+attr_html: :width 800px
+  [[./images/3d/led_circle_3d_left.png]]
